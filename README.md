@@ -1,4 +1,4 @@
 # Symmetric encryption
 
-# Dependencies:
+Dependencies:
 	PyCrypto
