@@ -70,10 +70,10 @@ encryptor = Encryptor(key);
 #encryptor.encrypt_location();
 #encryptor.decrypt_location();
 
-root = tkinter.Tk();
-root.title("AES 256");
+#root = tkinter.Tk();
+#root.title("AES 256");
 
 #load_file_btn = tkinter.Button(root, text = "Load file", command=encryptor.pad);
 #load_file_btn.pack();
 
-root.mainloop();
+#root.mainloop();
