@@ -1,5 +1,5 @@
 # Symmetric encryption
-A python script for encryption/decryption files (or locations) using AES (i.e., 128, 192 and 256) in CBC mode.
+A python script for file encryption/decryption with AES (i.e., 128, 192 and 256) in CBC mode.
 
 ## Getting Started
 
