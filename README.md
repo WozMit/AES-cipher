@@ -5,7 +5,7 @@ A python script for file encryption/decryption with AES (i.e., 128, 192 and 256)
 
 ### Built With
 * Python 3.6.4
-* PyCrypto [official site](https://www.dlitz.net/software/pycrypto/), [PyPI](https://pypi.python.org/pypi/pycrypto), [Source Repo (GitHub)](https://github.com/dlitz/pycrypto). Available via `conda` or `pip`.
+* PyCrypto 2.6.1 [official site](https://www.dlitz.net/software/pycrypto/), [PyPI](https://pypi.python.org/pypi/pycrypto), [Source Repo (GitHub)](https://github.com/dlitz/pycrypto). Available via `conda` or `pip`.
 
 ### Documentation
 * [PyCrypto API Documentation](https://www.dlitz.net/software/pycrypto/api/2.6/)
