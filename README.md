@@ -3,12 +3,13 @@ A python script for Authenticated encryption [AE](https://en.wikipedia.org/wiki/
 
 ### Built With
 * Python 3.6.4
-* PyCryptodome 3.5.1 [official site](http://pycryptodome.readthedocs.io/en/latest/src/introduction.html), [PyPI](https://pypi.python.org/pypi/pycryptodome), [Source Repo (GitHub)](https://github.com/Legrandin/pycryptodome). Available via `pip install pycryptodome`.
+* PyCryptodome 3.5.1 [official site](http://pycryptodome.readthedocs.io/en/latest/src/introduction.html), [PyPI](https://pypi.python.org/pypi/pycryptodome), [Source Repo (GitHub)](https://github.com/Legrandin/pycryptodome). Available via `pip install pycryptodome`
 
 ### Documentation
 * [PyCryptodome’s documentation](https://www.pycryptodome.org/en/latest/)
 * [PyCryptodome API documentation](http://pycryptodome.readthedocs.io/en/latest/src/api.html)
-* Project based on [this](https://github.com/wolf43/AES-GCM-example) code.
+* Project based on [this](https://github.com/wolf43/AES-GCM-example) code
+* [How to choose AE mode](https://blog.cryptographyengineering.com/2012/05/19/how-to-choose-authenticated-encryption/)
 
 ### Author
 WozMit
