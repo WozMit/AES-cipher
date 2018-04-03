@@ -74,4 +74,4 @@ try:
     print("Decrypted sensitive data: " + str(decrypted_data))
 except ValueError as mac_mismatch:
     print("\nMAC validation failed during decryption. No authentication gurantees on this ciphertext")
-print("\nUnauthenticated AAD: " + str(received_aad))
+    print("\nUnauthenticated AAD: " + str(received_aad))
