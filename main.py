@@ -5,7 +5,7 @@ import time as tm;
 start_time = tm.time();
 
 #root = tkinter.Tk();
-#root.title("AES 256");
+#root.title("AES");
 #root.geometry('250x200');
 
 #btn_folder = tkinter.Button(root, text = "Select folder", command=2);
@@ -19,7 +19,8 @@ start_time = tm.time();
 
 #root.mainloop();
 
-encriptor = Encryptor(256, "awesome password");
+password = "awesome password";
+encriptor = Encryptor(256, password);
 #encriptor.encrypt_location("D:\Documentos\Python\AES Cipher\X Files");
 #encriptor.decrypt_location("D:\Documentos\Python\AES Cipher\X Files");
 
