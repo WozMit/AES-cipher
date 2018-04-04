@@ -48,13 +48,26 @@ class Encryptor:
             file.close();
         plain_text = self.decrypt_bytes(ciphermessage);
         if(plain_text == False):
-            print(file_name+" could not be decrypted. Wrong password or corrupted file.");
+            print("Unable to decrypt "+file_name+". Incorrect password or corrupted file.");
         else:
             with open(file_name[:-4], 'wb') as file:
                 file.write(plain_text);
                 file.close();
             os.remove(file_name);
 
-encriptor = Encryptor(256, "awesome password");
-#encriptor.encrypt_file("D:\Documentos\Python\AES Cipher\X Files\calamardo.jpg");
-#encriptor.decrypt_file("D:\Documentos\Python\AES Cipher\X Files\calamardo.jpg.woz");
+    def get_file_list(self, location):
+        file_list = [];
+        for dir_name, sub_dir_list, dir_file_list in os.walk(location):
+            for file in dir_file_list:
+                file_list.append(os.path.join(dir_name, file));
+        return file_list;
+
+    def encrypt_location(self, location):
+        file_list = self.get_file_list(location);
+        for file in file_list:
+            self.encrypt_file(file);
+
+    def decrypt_location(self, location):
+        file_list = self.get_file_list(location);
+        for file in file_list:
+            self.decrypt_file(file);
