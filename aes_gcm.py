@@ -1,7 +1,7 @@
+import os;
 from Crypto.Cipher import AES;
 from Crypto.Protocol.KDF import scrypt;
 from Crypto.Random import get_random_bytes;
-import os;
 
 class Encryptor:
     def __init__(self, key_len, password):
