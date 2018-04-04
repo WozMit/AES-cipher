@@ -1,7 +1,7 @@
 # AES Cipher
-A python script for Authenticated encryption [AE](https://en.wikipedia.org/wiki/Authenticated_encryption) with [AES](https://es.wikipedia.org/wiki/Advanced_Encryption_Standard) (i.e., 128, 192 and 256) in [GCM](https://en.wikipedia.org/wiki/Galois/Counter_Mode) mode of operation. Key is obtained using the [scrypt](https://en.wikipedia.org/wiki/Scrypt) [KDF](https://en.wikipedia.org/wiki/Key_derivation_function) introduced in Percival's paper ["Stronger key derivation via sequential memory-hard functions"](http://www.tarsnap.com/scrypt/scrypt.pdf).
+A python script for Authenticated Encryption [AE](https://en.wikipedia.org/wiki/Authenticated_encryption) with [AES](https://es.wikipedia.org/wiki/Advanced_Encryption_Standard) (i.e., 128, 192 and 256) in [GCM](https://en.wikipedia.org/wiki/Galois/Counter_Mode) mode of operation for data authenticity (integrity) and confidentiality. Key is obtained using the [scrypt](https://en.wikipedia.org/wiki/Scrypt) [KDF](https://en.wikipedia.org/wiki/Key_derivation_function) introduced in Percival's paper ["Stronger key derivation via sequential memory-hard functions"](http://www.tarsnap.com/scrypt/scrypt.pdf).
 
-### Built With
+### Dependencies
 * Python 3.6.4
 * PyCryptodome 3.5.1 [official site](http://pycryptodome.readthedocs.io/en/latest/src/introduction.html), [PyPI](https://pypi.python.org/pypi/pycryptodome), [Source Repo (GitHub)](https://github.com/Legrandin/pycryptodome). Available via `pip install pycryptodome`
 
