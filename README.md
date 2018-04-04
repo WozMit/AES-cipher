@@ -8,7 +8,6 @@ A python script for Authenticated Encryption [AE](https://en.wikipedia.org/wiki/
 ### Documentation
 * [PyCryptodome’s documentation](https://www.pycryptodome.org/en/latest/)
 * [PyCryptodome API documentation](http://pycryptodome.readthedocs.io/en/latest/src/api.html)
-* Project based on [this](https://github.com/wolf43/AES-GCM-example) code
 * [How to choose AE mode](https://blog.cryptographyengineering.com/2012/05/19/how-to-choose-authenticated-encryption/)
 
 ### Author
